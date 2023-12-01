@@ -7,8 +7,8 @@ const repositoryResolver = {
             console.log(contextValue);
             return await contextValue.dataSources.githubAPI.listRepositories();
         },
-        getRepositoryDetails: async (_: any, { token, owner, name }: Record<string, string>, contextValue  : Context, info: any) => {
-            return await contextValue.dataSources.githubAPI.getRepositoryDetails(token, owner, name);
+        getRepositoryDetails: async (_: any, { owner, name, ref }: Record<string, string>, contextValue  : Context, info: any) => {
+            return await contextValue.dataSources.githubAPI.getRepositoryDetails(owner, name, ref);
         },
     },
 };
