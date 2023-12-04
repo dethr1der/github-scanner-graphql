@@ -11,7 +11,7 @@
 
 <h3>To perform query and test application:</h3>
 <ul>
-  <li>Click the link in console or open http://localhost:{YOUR_PORT_SETUPED_IN_ENV}</li>
+  <li>Click the link in console or open http://localhost:{YOUR_PORT_IN_ENV}</li>
   <li>Choose method what you want to query(There are only two methods available listRepositories and getRepositoryDetails)</li>
   <li>Provide available fields to look on them</li>
 </ul>
