@@ -50,7 +50,7 @@ export class GitHubAPI extends RESTDataSource {
         try {
             return await this.get('user/repos');
         } catch (error: any){
-            console.log(error);
+            console.error(error);
             throw new GraphQLError('Repositories have been not found', {
                 extensions: { code: '404' },
             });
