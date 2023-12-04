@@ -9,6 +9,7 @@ import { GitHubAPI } from '../dataSources/repository/github.datasource';
 import {Context} from "./interfaces/context.interface";
 import typeDefs from "../graphql/index";
 import {resolvers} from '../resolvers';
+import {requestLimiterMiddleware} from "./middlewares/requestLimiter.middleware";
 export const bootstrap = async () => {
     const app = express();
     const httpServer = http.createServer(app);
@@ -27,13 +28,14 @@ export const bootstrap = async () => {
         '/graphql',
         cors<cors.CorsRequest>(),
         express.json(),
+        requestLimiterMiddleware(2),
         expressMiddleware(server, {
-            context: async ({req}) => ({
+            context: async () => ({
                 dataSources: {
                     githubAPI,
-                },
+                }
             }),
-        })
+        }),
     );
 
     await new Promise<void>((resolve) => httpServer.listen({ port: config.PORT }, resolve));
