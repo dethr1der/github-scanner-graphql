@@ -2,7 +2,7 @@
 <h2>To setup project</h2>
 
 <ol>
-  <li>Install npm dependencies</ol>
+  <li>Install npm dependencies</li>
   <li>Rename .env.example to just .env and provide your github api token</li>
   <li>Run npm run start:dev</li>
 </ol>
