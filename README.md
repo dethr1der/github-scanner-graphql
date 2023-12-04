@@ -9,7 +9,7 @@
 <h3>YES, IT'S WORKING IN DEV ONLY MODE FOR NOW.</h3>
 <p> I don't see any reasons to publish this for production 🙂</p>
 
-<h3>To perform query and test aplication:</h3>
+<h3>To perform query and test application:</h3>
 <ul>
   <li>Click the link in console or open http://localhost:{YOUR_PORT_SETUPED_IN_ENV}</li>
   <li>Choose method what you want to query(There are only two methods available listRepositories and getRepositoryDetails)</li>
